@@ -43,14 +43,14 @@ bool Anagram::WordPairIsAnagram(const string& word1, const string& word2) {
     dePopulateWordsForaz(alphabets,word2);
     dePopulateWordsForAZ(alphabets,word2);
     for(unsigned int i_alphabets=0;i_alphabets<total_alphabets;i_alphabets++){
-        if((alphabets[i_alphabets]!=0)//all elements should br zero for anagram
+        if(alphabets[i_alphabets]!=0)//all elements should br zero for anagram
             return false;
     }
     return true;
 }
 vector<string> Anagram::SelectAnagrams(const string& word,const vector<string>& candidates) {
     vector<string> anagramOfWords;
-    for(unsigned int i_candidate=0;i_candidate<candidates.size();i_candidate++){
+    for(int i_candidate=0;i_candidate<candidates.size();i_candidate++){
         if(WordPairIsAnagram(word,candidates[i_candidate]))
                 anagramOfWords.push_back(candidates[i_candidate]);
     }
