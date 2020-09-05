@@ -50,7 +50,7 @@ bool Anagram::WordPairIsAnagram(const string& word1, const string& word2) {
 }
 vector<string> Anagram::SelectAnagrams(const string& word,const vector<string>& candidates) {
     vector<string> anagramOfWords;
-    for(signed int i_candidate=0;i_candidate<candidates.size();i_candidate++){
+    for(int i_candidate=0;i_candidate<candidates.size();i_candidate++){
         if(WordPairIsAnagram(word,candidates[i_candidate]))
                 anagramOfWords.push_back(candidates[i_candidate]);
     }
