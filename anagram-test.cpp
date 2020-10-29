@@ -4,11 +4,11 @@
 #include "anagram.h"
 
 TEST_CASE("recognizes shuffled alphabets as anagrams") {
-    REQUIRE(Anagram::WordPairIsAnagram("restful", "fluster") == true);
-    REQUIRE(Anagram::WordPairIsAnagram("forty five", "over fifty") == true);
+    REQUIRE(Anagram::WordPairIsAnagram("restful","fluster") == true);
+    REQUIRE(Anagram::WordPairIsAnagram("forty five","over fifty") == true);
 }
 
-TEST_CASE("reports non-anagrams") {
+TEST_CASE("When  two words are given then reports non-anagrams") {
     REQUIRE(Anagram::WordPairIsAnagram("something", "else") == false);
 }
 
