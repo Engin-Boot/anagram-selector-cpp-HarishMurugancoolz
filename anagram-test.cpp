@@ -17,7 +17,7 @@ TEST_CASE("recognizes anagrams when there are case- and space- differences") {
         == true);
 }
 
-TEST_CASE("selects anagrams of a word") {
+TEST_CASE("anagrams of a word") {
     auto selection = Anagram::SelectAnagrams("master",
         {"stream", "something", "maters"});
     REQUIRE(selection == std::vector<std::string>{"stream", "maters"});
