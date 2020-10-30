@@ -3,7 +3,7 @@
 #include "catch.hpp"
 #include "anagram.h"
 
-TEST_CASE("recognizes the shuffled alphabets as anagrams") {
+TEST_CASE("recognizes shuffled alphabets as anagrams") {
     REQUIRE(Anagram::WordPairIsAnagram("restful","fluster") == true);
     REQUIRE(Anagram::WordPairIsAnagram("forty five","over fifty") == true);
 }
